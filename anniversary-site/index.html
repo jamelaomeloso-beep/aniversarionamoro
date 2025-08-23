@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Amábile — Feliz Aniversário de Namoro</title>
+  <meta name="description" content="Uma página especial feita com todo amor do mundo para celebrar nosso aniversário de namoro." />
+  
+  <!-- Preconnect para otimização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fontes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Great+Vibes:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-heart">💖</div>
+      <div class="loading-text">Preparando algo especial...</div>
+    </div>
+  </div>
+
+  <!-- Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="brand-icon">💖</div>
+        <span class="brand-text">Para <strong>Amábile</strong></span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Início</a>
+        <a href="#timeline" class="nav-link">Nossa História</a>
+        <a href="#gallery" class="nav-link">Momentos</a>
+        <a href="#dreams" class="nav-link">Sonhos</a>
+        <a href="#messages" class="nav-link">Mensagens</a>
+        <button class="btn btn-primary" id="open-letter-btn">Abrir Carta 💌</button>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="floating-hearts"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-eyebrow">Feliz Aniversário de Namoro</div>
+          <h1 class="hero-title">
+            <span class="name-1">Amábile</span>
+            <span class="ampersand">&</span>
+            <span class="name-2">Joni</span>
+          </h1>
+          <p class="hero-description">
+            Cada dia ao seu lado é o meu lugar preferido. Obrigado por ser minha paz, 
+            minha alegria e meu futuro. 💖
+          </p>
+          
+          <!-- Countdown -->
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <div class="countdown-number" id="days">--</div>
+              <div class="countdown-label">dias</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="hours">--</div>
+              <div class="countdown-label">horas</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="minutes">--</div>
+              <div class="countdown-label">minutos</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-large" id="surprise-btn">
+              <span>Surpresa Especial</span>
+              <span class="btn-icon">✨</span>
+            </button>
+            <a href="#gallery" class="btn btn-secondary btn-large">
+              <span>Ver Galeria</span>
+              <span class="btn-icon">📸</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="image-container">
+            <img src="assets/images/eu_e_bem_acaits.webp" alt="Amábile e Joni" class="hero-photo">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossa História</h2>
+        <p class="section-description">Alguns capítulos que guardo no coração</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="timeline-icon">💕</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">Primeiro Encontro</div>
+            <h3 class="timeline-title">O Começo de Tudo</h3>
+            <p class="timeline-description">
+              Não podemos esquecer daquele dia mágico. O "tuc", mal sabiamos que seria o começo de uma linda história.
+              Dois bobalhões apaixonados um pelo outro, que riam de tudo, e se perdiam no olhar um do outro.
+              Ao longo das madrugadas. Sempre compartilhando -"Como foi o seu dia?"-.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-marker">
+            <div class="timeline-icon">🌟</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">Primeiro "Eu Te Amo"</div>
+            <h3 class="timeline-title">Palavras do Coração</h3>
+            <p class="timeline-description">
+              Hoje é costume entre nós dizer "Eu te amo" várias vezes ao dia, mas no inio foi diferente.
+              O primeiro <strong>eu te amo</strong> foi dito de outra forma, com a alma 
+              assim que nos encontramos pela primeira vez e hoje somo "oti", "loti", etc... 
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="timeline-marker">
+            <div class="timeline-icon">🚗</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">Nossas Viagens por aí</div>
+            <h3 class="timeline-title">Aventuras Juntos</h3>
+            <p class="timeline-description">
+             Todos os lugares mágicos onde passamos e deixamos nossa marca, há se o "lolo" falasse
+             quantas histórias ele poderia contar. Ou talvez das nossas viagens de carro para a praia.
+             Até mesmo as saidas no meio da noite so para conversar sobre a vida.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+          <div class="timeline-marker">
+            <div class="timeline-icon">🏠</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">Planos de Futuro</div>
+            <h3 class="timeline-title">Sonhando Juntos</h3>
+            <p class="timeline-description">
+              As conversar que temos sobre construir nosso proprio legado, nossa propria familia.
+
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos Momentos</h2>
+        <p class="section-description">Um mosaico de sorrisos, abraços e histórias</p>
+      </div>
+      
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="euevoce">Eu e Você</button>
+        <button class="filter-btn" data-filter="colagens">Colagens</button>
+        <button class="filter-btn" data-filter="voce">Você</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="euevoce">
+          <img src="assets/images/eu_e_bem_acaits.webp" alt="Eu e você" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Eu e Você</h4>
+              <p>Sempre ao seu lado meu amor</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="colagens">
+          <img src="assets/images/colagem bem e eu.webp" alt="Colagens" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Nos dois</h4>
+              <p>Sempre nos dois meu amor</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="gallery-item" data-category="colagens">
+          <img src="assets/images/colagem bem olhar.webp" alt="Colagens" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Seu olhar</h4>
+              <p>Uma colagem com o olhar mais belo do mundo</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="voce">
+          <img src="assets/images/bem.webp" alt="Momento cotidiano" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Momentos Simples</h4>
+              <p>A beleza do cotidiano</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Placeholder images -->
+        <div class="gallery-item" data-category="voce">
+          <img src="assets/images/bem praia.webp" alt="Celebração" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Ondas e meu amor</h4>
+              <p>Nesse momento as ondas param só para você sorrir</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="colagens">
+          <img src="assets/images/colagem bem praia.webp" alt="Aventura" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Linda em cada detalhe</h4>
+              <p>Uma colagem especial para você, mostrando que você é linda
+                em cada detalhe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+         <div class="gallery-item" data-category="euevoce">
+          <img src="assets/images/eu e bem marcelo.webp" alt="Aventura" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Hora do lanche</h4>
+              <p>Devorando um lanche com uma breja e muuiita maionese!</p>
+            </div>
+          </div>
+        </div>
+
+           <div class="gallery-item" data-category="euevoce">
+          <img src="assets/images/eu e bem shopping.webp" alt="Aventura" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Hora do lanche</h4>
+              <p>Dia de bk é incrível com você, meu amor e o rodeio!</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="gallery-item" data-category="euevoce">
+          <img src="assets/images/eu e bem.webp" alt="Aventura" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Hora do lanche</h4>
+              <p>Devorando um caldão de cana!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-category="euevoce">
+          <img src="assets/images/eu e bem carro.webp" alt="Xaxau Bi-bi" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>De chamegos</h4>
+              <p>Amor em cada detalhe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dreams Section -->
+  <section id="dreams" class="dreams-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos Sonhos</h2>
+        <p class="section-description">O futuro que queremos construir juntos</p>
+      </div>
+      
+      <div class="dreams-grid">
+        <div class="dream-card" data-aos="fade-up">
+          <div class="dream-icon">🏡</div>
+          <h3 class="dream-title">Nossa Casa</h3>
+          <p class="dream-description">
+            Uma casinha aconchegante onde possamos criar memórias, receber amigos e família, 
+            e construir nossa história juntos e com a pipoca.
+          </p>
+        </div>
+        
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="dream-icon">✈️</div>
+          <h3 class="dream-title">Viajar o Mundo</h3>
+          <p class="dream-description">
+            Conhecer novos lugares, culturas e pessoas. Colecionar passaportes carimbados 
+            e histórias para contar de todos os cantos do mundo desde as highlands da Escócia,
+            até as muralhas da China.
+          </p>
+        </div>
+        
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="dream-icon">👨‍👩‍👧‍👦</div>
+          <h3 class="dream-title">Família</h3>
+          <p class="dream-description">
+            Formar uma família linda, com 2 filhos e muitos animaizinhos, uma familia cheia de amor, risadas e momentos especiais. 
+            Ensinar sobre amor e bondade.
+          </p>
+        </div>
+        
+        <div class="dream-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="dream-icon">🌱</div>
+          <h3 class="dream-title">Crescer Juntos</h3>
+          <p class="dream-description">
+            Continuar evoluindo como pessoas e como casal, apoiando os sonhos um do outro 
+            e celebrando cada conquista.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Messages Section -->
+  <section id="messages" class="messages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Mensagens de Amor</h2>
+        <p class="section-description">Palavras que vêm do coração</p>
+      </div>
+      
+      <div class="messages-carousel">
+        <div class="message-item active">
+          <div class="message-content">
+            <p class="message-text">
+              "Eu te amo hoje e nas vidas passadas; 
+              Cada dia ao seu lado é um presente que eu nunca vou cansar de desembrulhar.
+            </p>
+            <div class="message-author">Com amor, Joni</div>
+          </div>
+        </div>
+        
+        <div class="message-item">
+          <div class="message-content">
+            <p class="message-text">
+              "Nos seus olhos eu encontro meu lar, no seu sorriso eu encontro minha paz, 
+              e no seu coração eu encontro meu futuro."
+            </p>
+            <div class="message-author">Para sempre seu, Joni</div>
+          </div>
+        </div>
+        
+        <div class="message-item">
+          <div class="message-content">
+            <p class="message-text">
+              "Obrigado por transformar dias comuns em momentos extraordinários, 
+              por fazer do amor algo simples e ao mesmo tempo mágico."
+            </p>
+            <div class="message-author">Do seu gostoso, Joni</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-controls">
+        <button class="carousel-btn prev" id="prev-message">‹</button>
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="carousel-btn next" id="next-message">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter Section -->
+  <section id="letter-section" class="letter-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Uma Carta Especial</h2>
+        <p class="section-description">Palavras escritas com todo carinho do mundo</p>
+      </div>
+      
+      <div class="letter-preview">
+        <div class="letter-envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="letter-icon">💌</div>
+            <h3>Para Amábile</h3>
+            <p>Uma carta escrita com todo amor</p>
+            <button class="btn btn-primary" id="open-letter-main">Abrir Carta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>Feito com 💖 por Joni para Amábile</p>
+          <p class="footer-year">© <span id="current-year"></span> - Nosso Amor Eterno</p>
+        </div>
+        <div class="footer-hearts">
+          <span class="heart">💖</span>
+          <span class="heart">💕</span>
+          <span class="heart">💗</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Letter Modal -->
+  <div id="letter-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="close-letter">×</button>
+      <div class="letter-content">
+        <div class="letter-header">
+          <h2>Minha Querida Amábile,</h2>
+          <div class="letter-date">Com todo meu amor</div>
+        </div>
+        
+        <div class="letter-body">
+          <p>
+            Hoje eu só queria te lembrar do quanto você transforma tudo ao meu redor. 
+            Do jeito que seu riso deixa tudo leve, e como sua presença faz qualquer dia comum virar especial.
+          </p>
+          
+          <p>
+            Você é minha inspiração diária, minha motivação para ser uma pessoa melhor, 
+            e a razão pela qual eu acredito que o amor verdadeiro existe e é possível.
+          </p>
+          
+          <p>
+            Obrigado por ser meu porto seguro e minha aventura favorita. 
+            Por me ensinar que o amor verdadeiro nos faz realmente mudar.
+          </p>
+          
+          <p>
+            Eu te amo — ontem, hoje e todos os amanhãs que a gente ainda vai escrever juntos. 
+            Que nossa história continue sendo linda, cheia de cumplicidade, risadas e muito amor
+            te amo de montão minha bic de todas as cores é com a sua tinta que vamos
+            colorir nossa história.
+          </p>
+          
+          <div class="letter-signature">
+            <p>Com todo meu amor e carinho,</p>
+            <div class="signature">Joni 💖</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox for Gallery -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close">×</button>
+      <button class="lightbox-prev">‹</button>
+      <button class="lightbox-next">›</button>
+      <img class="lightbox-image" src="" alt="">
+      <div class="lightbox-info">
+        <h4 class="lightbox-title"></h4>
+        <p class="lightbox-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/particles.js"></script>
+</body>
+</html>
+
